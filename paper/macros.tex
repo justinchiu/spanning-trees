@@ -1,0 +1,148 @@
+% \newcommand{\checkNotation}[1]{{\color{blue}#1}}
+\newcommand{\checkNotation}[1]{{#1}}
+
+\newcommand{\defn}[1]{\textbf{#1}}
+\renewcommand{\th}{^{\text{th}}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\setminus}{\smallsetminus}
+
+
+% Symbols
+\newcommand{\tree}{\checkNotation{d}}
+\newcommand{\st}{\checkNotation{\mathcal{D}}}
+\renewcommand{\root}{\checkNotation{\rho}}
+\newcommand{\prob}{p}
+\newcommand{\qprob}{q}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\lab}{\checkNotation{\mathcal{Y}}}
+\newcommand{\edges}[0]{\checkNotation{\mathcal{E}}}
+\newcommand{\nodes}[0]{\checkNotation{\mathcal{N}}}
+\newcommand{\edge}[2]{\checkNotation{(#1\,{\rightarrow}\,#2)}}
+\newcommand{\edgeij}[0]{\edge{i}{j}}
+\newcommand{\edgekl}[0]{\edge{k}{l}}
+\newcommand{\edgeijp}[0]{\edge{i'}{j'}}
+\newcommand{\edgeklp}[0]{\edge{k'}{l'}}
+\newcommand{\inc}[1]{\checkNotation{\mathcal{D}_{#1}}}
+\newcommand{\col}[2]{\checkNotation{\mathcal{L}_{#1#2}}}
+
+
+% Matrices
+\newcommand{\lap}{\checkNotation{\mathbf{L}}}
+\newcommand{\laphat}{\checkNotation{\mathbf{\hat{L}}}}
+\newcommand{\wmat}{\checkNotation{\mathbf{W}}}
+\newcommand{\lapelem}[1]{\checkNotation{\mathrm{L}_{#1}}}
+\newcommand{\laphatelem}[1]{\checkNotation{\hat{\mathrm{L}}_{#1}}}
+\newcommand{\wmatelem}[1]{\checkNotation{\mathrm{W}_{#1}}}
+\newcommand{\cached}{\checkNotation{\mathbf{B}}}
+\newcommand{\cachedelem}[1]{\checkNotation{\mathrm{B}_{#1}}}
+\newcommand{\lapprime}[0]{\checkNotation{\mathrm{L}'}}
+\newcommand{\lapp}{\checkNotation{\mathbf{L'}}}
+\newcommand{\dlap}[2]{\checkNotation{\lapprime_{#1,#2}}}
+% Vectors
+\newcommand{\vf}{{\boldsymbol f}}
+\newcommand{\vroot}{\boldsymbol \root}
+\newcommand{\vd}{\boldsymbol d}
+\newcommand{\vt}{\boldsymbol t}
+\newcommand{\vtheta}{\boldsymbol \theta}
+\newcommand{\vw}{\boldsymbol w}
+\newcommand{\vr}{\boldsymbol r}
+\newcommand{\vs}{\boldsymbol s}
+\newcommand{\zerovector}{\boldsymbol 0}
+
+% Matrices
+\renewcommand{\det}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\submat}[2]{#1^{(#2)}}
+\newcommand{\minor}[2]{\det{\submat{#1}{#2}}}
+
+% Notation
+\newcommand{\treefunc}[2]{\checkNotation{#1(#2)}}
+\newcommand{\edgefunc}[2]{\checkNotation{#1_{#2}}}
+\newcommand{\total}[1]{\checkNotation{\bar{#1}}}
+\newcommand{\totalw}[1]{\checkNotation{\widetilde{w_{#1}}}}
+\newcommand{\expect}[2]{\checkNotation{\mathbb{E}_{#1}\!\left[ {#2} \right]}}
+\newcommand{\wtree}[1]{\treefunc{w}{#1}}
+\newcommand{\ptree}[1]{\treefunc{\prob}{#1}}
+\newcommand{\qtree}[1]{\treefunc{\qprob}{#1}}
+\newcommand{\rtree}[1]{\treefunc{r}{#1}}
+\newcommand{\stree}[1]{\treefunc{s}{#1}}
+\newcommand{\ttree}[1]{\treefunc{t}{#1}}
+\renewcommand{\wedge}[1]{\edgefunc{w}{#1}}
+\newcommand{\redge}[1]{\edgefunc{r}{#1}}
+\newcommand{\sedge}[1]{\edgefunc{s}{#1}}
+\newcommand{\tedge}[1]{\edgefunc{t}{#1}}
+\newcommand{\wbar}{\checkNotation{\mathrm{Z}}}
+\newcommand{\rbar}{\total{r}}
+\newcommand{\sbar}{\total{s}}
+\newcommand{\tbar}{\total{t}}
+\newcommand{\weight}[1]{w(#1)}
+\newcommand{\weightfunc}[1]{w(#1)}
+\newcommand{\funcSig}[3]{#1{:}\,\,#2 \mapsto #3}
+\newcommand{\treefuncSig}[2]{\funcSig{#1}{\st}{\R^{#2}}}
+\newcommand{\otherwbar}[1]{\wbar^{(#1)}}
+
+\newcommand{\rhat}[1]{\checkNotation{\widehat{r_{#1}}}}
+\newcommand{\shat}[1]{\checkNotation{\widehat{s_{#1}}}}
+
+% Operations
+%\newcommand{\defeq}[0]{\overset{\smaller\mathrm{def}}{=}}
+\newcommand{\sumtree}{\sum_{\tree \in \st}}
+\newcommand{\step}[1]{(#1)}
+%\newcommand{\pluseq}{\ \texttt{+=}\ }
+\DeclareMathOperator*{\argmax}{argmax}
+\newcommand{\bigo}[1]{\mathcal{O}\!\left(#1\right)}
+%\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\innerProd}[2]{#1^{\top}#2}
+\newcommand{\outerProd}[2]{#1#2^{\top}}
+\newcommand{\runtime}[1]{\mathrm{Cost}\!\left\{ #1 \right\}}
+\newcommand{\ent}{\mathrm{H}}
+\newcommand{\entalpha}{\ent_{\alpha}}
+\newcommand{\uas}{\mathrm{UAS}}
+
+\newcommand{\kron}[0]{\otimes}
+\newcommand{\hadamard}[0]{\!\odot\!}
+
+\newcommand{\nF}{\checkNotation{F}}
+\newcommand{\nN}{\checkNotation{N}}
+\newcommand{\nM}{\checkNotation{M}}
+\newcommand{\nK}{\checkNotation{K}}
+\newcommand{\nQ}{\checkNotation{Q}}
+\newcommand{\nR}{\checkNotation{R}}
+\newcommand{\nS}{\checkNotation{S}}
+\newcommand{\nRs}{\checkNotation{R'}}
+\newcommand{\nSs}{\checkNotation{S'}}
+\newcommand{\nFs}{\checkNotation{F'}}
+
+\newcommand{\lapsparse}[1]{\mathcal{L}_{#1}}
+\newcommand{\plusequal}{{\,\textsf{+=}\,}}
+\newcommand{\minusequal}{{\,\textsf{-=}\,}}
+
+
+\newcommand{\real}{\mathbb{R}}
+
+% tight \in and tight
+\newcommand{\pwdot}[0]{\!\cdot\!}
+\newcommand{\tin}[0]{\,{\in}\,}
+\newcommand{\teq}[0]{\,{=}\,}
+\newcommand{\tcdot}[0]{\,{\cdot}\,}
+
+\newcommand{\monstersum}[1]{{\sum_{\mathclap{\substack{#1}}}}}  % smashed and possible stacked
+
+\newcommand{\renyi}{R\'{e}nyi\xspace}
+
+% Algorithm names
+\newcommand{\algFace}[1]{\texttt{#1}}
+\newcommand{\algCall}[2]{#1\!\left( #2 \right)}
+\newcommand{\algMTT}[0]{\algFace{Z}}
+\newcommand{\algLap}[0]{\algFace{L}}
+\newcommand{\algFirst}[0]{\algFace{T}_1}
+\newcommand{\algSecondVp}[0]{\algFace{T}_2^{\algFace{v}}}
+\newcommand{\algSecondHes}[0]{\algFace{T}_2^\algFace{h}}
+\newcommand{\algSecond}[0]{\algFace{T}_2}
+\newcommand{\algJac}[0]{\algFace{D}_1}
+\newcommand{\algHes}[0]{\algFace{D}_2}
+
+
+\newcommand{\target}{\checkNotation{f^*}}
+
+\newcommand{\onehot}[1]{\checkNotation{\overrightarrow{\boldsymbol{1}_{#1}}}}

@@ -1,0 +1,459 @@
+\begin{thebibliography}{45}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Abadi et~al.(2015)Abadi, Agarwal, Barham, Brevdo, Chen, Citro,
+  Corrado, Davis, Dean, Devin, Ghemawat, Goodfellow, Harp, Irving, Isard, Jia,
+  Jozefowicz, Kaiser, Kudlur, Levenberg, Man\'{e}, Monga, Moore, Murray, Olah,
+  Schuster, Shlens, Steiner, Sutskever, Talwar, Tucker, Vanhoucke, Vasudevan,
+  Vi\'{e}gas, Vinyals, Warden, Wattenberg, Wicke, Yu, and Zheng}]{tensorflow}
+Mart\'{\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+  Craig Citro, Greg~S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin,
+  Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard,
+  Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh
+  Levenberg, Dan Man\'{e}, Rajat Monga, Sherry Moore, Derek Murray, Chris Olah,
+  Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal Talwar,
+  Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Vi\'{e}gas, Oriol
+  Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and Xiaoqiang
+  Zheng. 2015.
+\newblock \href {http://tensorflow.org/} {{TensorFlow}: Large-scale machine
+  learning on heterogeneous systems}.
+\newblock Software available from tensorflow.org.
+
+\bibitem[{Bej{\v{c}}ek et~al.(2013)Bej{\v{c}}ek, Haji{\v{c}}ov{\'{a}},
+  Haji{\v{c}}, J{\'{i}}nov{\'{a}}, Kettnerov{\'{a}},
+  Kol{\'{a}}{\v{r}}ov{\'{a}}, Mikulov{\'{a}}, M{\'{i}}rovsk{\'{y}}, Nedoluzhko,
+  Panevov{\'{a}}, Pol{\'{a}}kov{\'{a}}, {\v{S}}ev{\v{c}}{\'{i}}kov{\'{a}},
+  {\v{S}}t{\v{e}}p{\'{a}}nek, and Zik{\'{a}}nov{\'{a}}}]{prague_dep}
+Eduard Bej{\v{c}}ek, Eva Haji{\v{c}}ov{\'{a}}, Jan Haji{\v{c}}, Pavl{\'{i}}na
+  J{\'{i}}nov{\'{a}}, V{\'{a}}clava Kettnerov{\'{a}}, Veronika
+  Kol{\'{a}}{\v{r}}ov{\'{a}}, Marie Mikulov{\'{a}}, Ji{\v{r}}{\'{i}}
+  M{\'{i}}rovsk{\'{y}}, Anna Nedoluzhko, Jarmila Panevov{\'{a}}, Lucie
+  Pol{\'{a}}kov{\'{a}}, Magda {\v{S}}ev{\v{c}}{\'{i}}kov{\'{a}}, Jan
+  {\v{S}}t{\v{e}}p{\'{a}}nek, and {\v{S}}{\'{a}}rka Zik{\'{a}}nov{\'{a}}. 2013.
+\newblock \href {http://ufal.mff.cuni.cz/pdt3.0} {Prague dependency treebank
+  3.0}.
+
+\bibitem[{Bradbury et~al.(2018)Bradbury, Frostig, Hawkins, Johnson, Leary,
+  Maclaurin, and Wanderman-Milne}]{jax}
+James Bradbury, Roy Frostig, Peter Hawkins, Matthew~James Johnson, Chris Leary,
+  Dougal Maclaurin, and Skye Wanderman-Milne. 2018.
+\newblock \href {http://github.com/google/jax} {{JAX}: {C}omposable
+  transformations of {P}ython+{N}um{P}y programs}.
+
+\bibitem[{Darwiche(2003)}]{darwiche}
+Adnan Darwiche. 2003.
+\newblock \href {https://doi.org/10.1145/765568.765570} {A differential
+  approach to inference in {B}ayesian networks}.
+\newblock \emph{Journal of the ACM}, 50(3).
+
+\bibitem[{Dozat and Manning(2017)}]{dozat}
+Timothy Dozat and Christopher~D. Manning. 2017.
+\newblock \href {https://openreview.net/forum?id=Hk95PK9le} {Deep biaffine
+  attention for neural dependency parsing}.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations}.
+
+\bibitem[{Druck(2011)}]{druck-thesis}
+Gregory Druck. 2011.
+\newblock \href {http://gregorydruck.name/pubs/thesis.pdf} {\emph{Generalized
+  Expectation Criteria for Lightly Supervised Learning}}.
+\newblock Ph.D. thesis, University of Massachusetts Amherst.
+
+\bibitem[{Druck et~al.(2009)Druck, Mann, and McCallum}]{druck-etal-2009-semi}
+Gregory Druck, Gideon Mann, and Andrew McCallum. 2009.
+\newblock \href {https://www.aclweb.org/anthology/P09-1041} {Semi-supervised
+  learning of dependency parsers using generalized expectation criteria}.
+\newblock In \emph{Proceedings of the International Joint Conference on Natural
+  Language Processing}.
+
+\bibitem[{Druck and Smith(2009)}]{druck09covariance}
+Gregory Druck and David Smith. 2009.
+\newblock \href {http://gregorydruck.name/pubs/druck09covariance.pdf}
+  {Computing conditional feature covariance in non-projective tree conditional
+  random fields}.
+\newblock Technical Report UM-CS-2009-060, University of Massachusetts.
+
+\bibitem[{Dumas and Pan(2016)}]{dumas2016fast}
+Jean-Guillaume Dumas and Victor Pan. 2016.
+\newblock \href {https://arxiv.org/pdf/1612.05766.pdf} {Fast matrix
+  multiplication and symbolic computation}.
+\newblock \emph{arXiv preprint arXiv:1612.05766}.
+
+\bibitem[{Eisner(2016)}]{eisner16backprop}
+Jason Eisner. 2016.
+\newblock \href {https://doi.org/10.18653/v1/W16-5901} {Inside-outside and
+  forward-backward algorithms are just backprop (tutorial paper)}.
+\newblock In \emph{Proceedings of the Workshop on Structured Prediction for
+  NLP@EMNLP 2016, Austin, TX, USA, November 5, 2016}.
+
+\bibitem[{Eisner and Blatz(2007)}]{eisner-blatz-2007}
+Jason Eisner and John Blatz. 2007.
+\newblock \href {http://cs.jhu.edu/~jason/papers/#eisner-blatz-2007} {Program
+  transformations for optimization of parsing algorithms and other weighted
+  logic programs}.
+\newblock In \emph{Proceedings of the Conference on Formal Grammar}, pages
+  45--85. CSLI Publications.
+
+\bibitem[{Gabow and Tarjan(1984)}]{GabowT84}
+Harold~N. Gabow and Robert~Endre Tarjan. 1984.
+\newblock \href {https://doi.org/10.1016/0196-6774(84)90042-7} {Efficient
+  algorithms for a family of matroid intersection problems}.
+\newblock \emph{Journal of Algorithms}, 5(1).
+
+\bibitem[{Gallo et~al.(1993)Gallo, Longo, and Pallottino}]{gallo}
+Giorgio Gallo, Giustino Longo, and Stefano Pallottino. 1993.
+\newblock \href {https://doi.org/10.1016/0166-218X(93)90045-P} {Directed
+  hypergraphs and applications}.
+\newblock \emph{Discrete Applied Mathematics}, 42(2).
+
+\bibitem[{Gildea(2011)}]{gildea2011grammar}
+Daniel Gildea. 2011.
+\newblock \href {https://doi.org/10.1162/coli_a_00040} {Grammar factorization
+  by tree decomposition}.
+\newblock \emph{Computational Linguistics}, 37(1):231--248.
+
+\bibitem[{Grandvalet and Bengio(2004)}]{grandvalet-bengio-2005}
+Yves Grandvalet and Yoshua Bengio. 2004.
+\newblock \href
+  {http://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization}
+  {Semi-supervised learning by entropy minimization}.
+\newblock In \emph{Advances in Neural Information Processing Systems}.
+
+\bibitem[{Griewank and Walther(2008)}]{griewank-walther}
+Andreas Griewank and Andrea Walther. 2008.
+\newblock \href {https://doi.org/10.1137/1.9780898717761} {\emph{Evaluating
+  Derivatives--Principles and Techniques of Algorithmic Differentiation}}, 2
+  edition.
+\newblock SIAM.
+
+\bibitem[{Jerrum and Snir(1982)}]{Jerrum-Snir-1982}
+M.~Jerrum and M.~Snir. 1982.
+\newblock \href {https://dl.acm.org/doi/pdf/10.1145/322326.322341} {Some exact
+  complexity results for straight-line computations over semirings}.
+\newblock \emph{Journal of the Association for Computing Machinery}, 29(3).
+
+\bibitem[{Kaltofen(1992)}]{kaltofen1992computing}
+Erich Kaltofen. 1992.
+\newblock \href {https://dl.acm.org/doi/pdf/10.1145/143242.143350} {On
+  computing determinants of matrices without divisions}.
+\newblock In \emph{Papers from the International Symposium on Symbolic and
+  Algebraic Computation}.
+
+\bibitem[{Kirchhoff(1847)}]{kirchhoff}
+Gustav Kirchhoff. 1847.
+\newblock \href
+  {https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.18471481202} {{\"U}ber
+  die aufl{\"o}sung der gleichungen, auf welche man bei der untersuchung der
+  linearen vertheilung galvanischer str{\"o}me gef{\"u}hrt wird}.
+\newblock \emph{Annalen der Physik}, 148(12).
+
+\bibitem[{Kong et~al.(2014)Kong, Schneider, Swayamdipta, Bhatia, Dyer, and
+  Smith}]{kong-etal-2014-dependency}
+Lingpeng Kong, Nathan Schneider, Swabha Swayamdipta, Archna Bhatia, Chris Dyer,
+  and Noah~A. Smith. 2014.
+\newblock \href {https://doi.org/10.3115/v1/D14-1108} {A dependency parser for
+  tweets}.
+\newblock In \emph{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Koo et~al.(2007)Koo, Globerson, Carreras, and
+  Collins}]{koo-et-al-2007}
+Terry Koo, Amir Globerson, Xavier Carreras, and Michael Collins. 2007.
+\newblock \href {https://www.aclweb.org/anthology/D07-1015} {Structured
+  prediction models via the matrix-tree theorem}.
+\newblock In \emph{Proceedings of the Joint Conference on Empirical Methods in
+  Natural Language Processing and Computational Natural Language Learning}.
+
+\bibitem[{Li and Eisner(2009)}]{li-eisner-2009}
+Zhifei Li and Jason Eisner. 2009.
+\newblock \href {http://cs.jhu.edu/~jason/papers/#li-eisner-2009} {First- and
+  second-order expectation semirings with applications to minimum-risk training
+  on translation forests}.
+\newblock In \emph{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Liu and Lapata(2018)}]{liu-lapata-2018-learning}
+Yang Liu and Mirella Lapata. 2018.
+\newblock \href {https://doi.org/10.1162/tacl_a_00005} {Learning structured
+  text representations}.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  6.
+
+\bibitem[{Ma and Hovy(2017)}]{ma}
+Xuezhe Ma and Eduard Hovy. 2017.
+\newblock \href {https://www.aclweb.org/anthology/I17-1007} {Neural
+  probabilistic model for non-projective {MST} parsing}.
+\newblock In \emph{Proceedings of the International Joint Conference on Natural
+  Language Processing}.
+
+\bibitem[{Ma and Xia(2014)}]{ma-xia-2014-unsupervised}
+Xuezhe Ma and Fei Xia. 2014.
+\newblock \href {https://doi.org/10.3115/v1/P14-1126} {Unsupervised dependency
+  parsing with transferring distribution via parallel guidance and entropy
+  regularization}.
+\newblock In \emph{Proceedings of the Annual Meeting of the Association for
+  Computational Linguistics}.
+
+\bibitem[{Martins et~al.(2010)Martins, Smith, Xing, Aguiar, and
+  Figueiredo}]{martins-etal-2010-turbo}
+Andr{\'e} Martins, Noah Smith, Eric Xing, Pedro Aguiar, and M{\'a}rio
+  Figueiredo. 2010.
+\newblock \href {https://www.aclweb.org/anthology/D10-1004} {Turbo parsers:
+  Dependency parsing by approximate variational inference}.
+\newblock In \emph{Proceedings of the 2010 Conference on Empirical Methods in
+  Natural Language Processing}, pages 34--44.
+
+\bibitem[{McCallum et~al.(2007)McCallum, Mann, and
+  Druck}]{mccallum2007generalized}
+Andrew McCallum, Gideon Mann, and Gregory Druck. 2007.
+\newblock \href {https://people.cs.umass.edu/~mccallum/papers/ge08note.pdf}
+  {Generalized expectation criteria}.
+\newblock Technical Report~95, University of Massachusetts.
+
+\bibitem[{McDonald et~al.(2005{\natexlab{a}})McDonald, Crammer, and
+  Pereira}]{mcdonald}
+Ryan McDonald, Koby Crammer, and Fernando Pereira. 2005{\natexlab{a}}.
+\newblock \href {https://doi.org/10.3115/1219840.1219852} {Online large-margin
+  training of dependency parsers}.
+\newblock In \emph{Proceedings of the Annual Meeting of the Association for
+  Computational Linguistics}.
+
+\bibitem[{McDonald et~al.(2005{\natexlab{b}})McDonald, Pereira, Ribarov, and
+  Haji{\v{c}}}]{mcdonald-etal-2005-non}
+Ryan McDonald, Fernando Pereira, Kiril Ribarov, and Jan Haji{\v{c}}.
+  2005{\natexlab{b}}.
+\newblock \href {https://www.aclweb.org/anthology/H05-1066} {Non-projective
+  dependency parsing using spanning tree algorithms}.
+\newblock In \emph{Proceedings of Human Language Technology Conference and
+  Conference on Empirical Methods in Natural Language Processing}.
+
+\bibitem[{McDonald and Satta(2007)}]{mcdonald-satta-2007}
+Ryan McDonald and Giorgio Satta. 2007.
+\newblock \href {https://www.aclweb.org/anthology/W07-2216} {On the complexity
+  of non-projective data-driven dependency parsing}.
+\newblock In \emph{Proceedings of the International Conference on Parsing
+  Technologies}.
+
+\bibitem[{Mikl{\'o}s(2019)}]{miklos2019computational}
+Istv{\'a}n Mikl{\'o}s. 2019.
+\newblock \href {https://www.taylorfrancis.com/books/9781315266954}
+  {\emph{Computational Complexity of Counting and Sampling}}.
+\newblock CRC Press.
+
+\bibitem[{Nivre et~al.(2018)Nivre, Abrams, Agi{\'c}, Ahrenberg, Antonsen,
+  Aplonova, Aranzabe, Arutie, Asahara, Ateyah, Attia, Atutxa, Augustinus,
+  Badmaeva, Ballesteros, Banerjee, Bank, Barbu~Mititelu, Basmov, Bauer,
+  Bellato, Bengoetxea, Berzak, Bhat, Bhat, Biagetti, Bick, Blokland, Bobicev,
+  B{\"o}rstell, Bosco, Bouma, Bowman, Boyd, Burchardt, Candito, Caron, Caron,
+  Cebiro{\u g}lu~Eryi{\u g}it, Cecchini, Celano, {\v C}{\'e}pl{\"o}, Cetin,
+  Chalub, Choi, Cho, Chun, Cinkov{\'a}, Collomb, {\c C}{\"o}ltekin, Connor,
+  Courtin, Davidson, de~Marneffe, de~Paiva, Diaz~de Ilarraza, Dickerson, Dirix,
+  Dobrovoljc, Dozat, Droganova, Dwivedi, Eli, Elkahky, Ephrem, Erjavec,
+  Etienne, Farkas, Fernandez~Alcalde, Foster, Freitas, Gajdo{\v s}ov{\'a},
+  Galbraith, Garcia, G{\"a}rdenfors, Garza, Gerdes, Ginter, Goenaga, Gojenola,
+  G{\"o}k{\i}rmak, Goldberg, G{\'o}mez~Guinovart, Gonz{\'a}les~Saavedra,
+  Grioni, Gr{\=u}z{\={\i}}tis, Guillaume, Guillot-Barbance, Habash, Haji{\v c},
+  Haji{\v c}~jr., H{\`a}~M{\~y}, Han, Harris, Haug, Hladk{\'a}, Hlav{\'a}{\v
+  c}ov{\'a}, Hociung, Hohle, Hwang, Ion, Irimia, Ishola, Jel{\'{\i}}nek,
+  Johannsen, J{\o}rgensen, Ka{\c s}{\i}kara, Kahane, Kanayama, Kanerva, Katz,
+  Kayadelen, Kenney, Kettnerov{\'a}, Kirchner, Kopacewicz, Kotsyba, Krek, Kwak,
+  Laippala, Lambertino, Lam, Lando, Larasati, Lavrentiev, Lee,
+  L{\^e}~H{\`{\^o}}ng, Lenci, Lertpradit, Leung, Li, Li, Li, Lim, Ljube{\v
+  s}i{\'c}, Loginova, Lyashevskaya, Lynn, Macketanz, Makazhanov, Mandl,
+  Manning, Manurung, M{\u a}r{\u a}nduc, Mare{\v c}ek, Marheinecke,
+  Mart{\'{\i}}nez~Alonso, Martins, Ma{\v s}ek, Matsumoto, {McDonald}, Mendon{\c
+  c}a, Miekka, Misirpashayeva, Missil{\"a}, Mititelu, Miyao, Montemagni, More,
+  Moreno~Romero, Mori, Mori, Mortensen, Moskalevskyi, Muischnek, Murawaki,
+  M{\"u}{\"u}risep, Nainwani, Navarro~Hor{\~n}iacek, Nedoluzhko, Ne{\v
+  s}pore-B{\=e}rzkalne, Nguy{\~{\^e}}n~Th{\d i}, Nguy{\~{\^e}}n Th{\d i}~Minh,
+  Nikolaev, Nitisaroj, Nurmi, Ojala, Ol{\'u}{\`o}kun, Omura, Osenova,
+  {\"O}stling, {\O}vrelid, Partanen, Pascual, Passarotti, Patejuk,
+  Paulino-Passos, Peng, Perez, Perrier, Petrov, Piitulainen, Pitler, Plank,
+  Poibeau, Popel, Pretkalni{\c n}a, Pr{\'e}vost, Prokopidis,
+  Przepi{\'o}rkowski, Puolakainen, Pyysalo, R{\"a}{\"a}bis, Rademaker,
+  Ramasamy, Rama, Ramisch, Ravishankar, Real, Reddy, Rehm, Rie{\ss}ler,
+  Rinaldi, Rituma, Rocha, Romanenko, Rosa, Rovati, Roșca, Rudina, Rueter,
+  Sadde, Sagot, Saleh, Samard{\v z}i{\'c}, Samson, Sanguinetti, Saul{\={\i}}te,
+  Sawanakunanon, Schneider, Schuster, Seddah, Seeker, Seraji, Shen, Shimada,
+  Shohibussirri, Sichinava, Silveira, Simi, Simionescu, Simk{\'o}, {\v
+  S}imkov{\'a}, Simov, Smith, Soares-Bastos, Spadine, Stella, Straka,
+  Strnadov{\'a}, Suhr, Sulubacak, Sz{\'a}nt{\'o}, Taji, Takahashi, Tanaka,
+  Tellier, Trosterud, Trukhina, Tsarfaty, Tyers, Uematsu, Ure{\v s}ov{\'a},
+  Uria, Uszkoreit, Vajjala, van Niekerk, van Noord, Varga, Villemonte de~la
+  Clergerie, Vincze, Wallin, Wang, Washington, Williams, Wir{\'e}n,
+  Woldemariam, Wong, Yan, Yavrumyan, Yu, {\v Z}abokrtsk{\'y}, Zeldes, Zeman,
+  Zhang, and Zhu}]{ud}
+Joakim Nivre, Mitchell Abrams, {\v Z}eljko Agi{\'c}, Lars Ahrenberg, Lene
+  Antonsen, Katya Aplonova, Maria~Jesus Aranzabe, Gashaw Arutie, Masayuki
+  Asahara, Luma Ateyah, Mohammed Attia, Aitziber Atutxa, Liesbeth Augustinus,
+  Elena Badmaeva, Miguel Ballesteros, Esha Banerjee, Sebastian Bank, Verginica
+  Barbu~Mititelu, Victoria Basmov, John Bauer, Sandra Bellato, Kepa Bengoetxea,
+  Yevgeni Berzak, Irshad~Ahmad Bhat, Riyaz~Ahmad Bhat, Erica Biagetti, Eckhard
+  Bick, Rogier Blokland, Victoria Bobicev, Carl B{\"o}rstell, Cristina Bosco,
+  Gosse Bouma, Sam Bowman, Adriane Boyd, Aljoscha Burchardt, Marie Candito,
+  Bernard Caron, Gauthier Caron, G{\"u}l{\c s}en Cebiro{\u g}lu~Eryi{\u g}it,
+  Flavio~Massimiliano Cecchini, Giuseppe G.~A. Celano, Slavom{\'{\i}}r {\v
+  C}{\'e}pl{\"o}, Savas Cetin, Fabricio Chalub, Jinho Choi, Yongseok Cho,
+  Jayeol Chun, Silvie Cinkov{\'a}, Aur{\'e}lie Collomb, {\c C}a{\u g}r{\i} {\c
+  C}{\"o}ltekin, Miriam Connor, Marine Courtin, Elizabeth Davidson,
+  Marie-Catherine de~Marneffe, Valeria de~Paiva, Arantza Diaz~de Ilarraza,
+  Carly Dickerson, Peter Dirix, Kaja Dobrovoljc, Timothy Dozat, Kira Droganova,
+  Puneet Dwivedi, Marhaba Eli, Ali Elkahky, Binyam Ephrem, Toma{\v z} Erjavec,
+  Aline Etienne, Rich{\'a}rd Farkas, Hector Fernandez~Alcalde, Jennifer Foster,
+  Cl{\'a}udia Freitas, Katar{\'{\i}}na Gajdo{\v s}ov{\'a}, Daniel Galbraith,
+  Marcos Garcia, Moa G{\"a}rdenfors, Sebastian Garza, Kim Gerdes, Filip Ginter,
+  Iakes Goenaga, Koldo Gojenola, Memduh G{\"o}k{\i}rmak, Yoav Goldberg, Xavier
+  G{\'o}mez~Guinovart, Berta Gonz{\'a}les~Saavedra, Matias Grioni, Normunds
+  Gr{\=u}z{\={\i}}tis, Bruno Guillaume, C{\'e}line Guillot-Barbance, Nizar
+  Habash, Jan Haji{\v c}, Jan Haji{\v c}~jr., Linh H{\`a}~M{\~y}, Na-Rae Han,
+  Kim Harris, Dag Haug, Barbora Hladk{\'a}, Jaroslava Hlav{\'a}{\v c}ov{\'a},
+  Florinel Hociung, Petter Hohle, Jena Hwang, Radu Ion, Elena Irimia, {\d
+  O}l{\'a}j{\'{\i}}d{\'e} Ishola, Tom{\'a}{\v s} Jel{\'{\i}}nek, Anders
+  Johannsen, Fredrik J{\o}rgensen, H{\"u}ner Ka{\c s}{\i}kara, Sylvain Kahane,
+  Hiroshi Kanayama, Jenna Kanerva, Boris Katz, Tolga Kayadelen, Jessica Kenney,
+  V{\'a}clava Kettnerov{\'a}, Jesse Kirchner, Kamil Kopacewicz, Natalia
+  Kotsyba, Simon Krek, Sookyoung Kwak, Veronika Laippala, Lorenzo Lambertino,
+  Lucia Lam, Tatiana Lando, Septina~Dian Larasati, Alexei Lavrentiev, John Lee,
+  Phuong L{\^e}~H{\`{\^o}}ng, Alessandro Lenci, Saran Lertpradit, Herman Leung,
+  Cheuk~Ying Li, Josie Li, Keying Li, {KyungTae} Lim, Nikola Ljube{\v s}i{\'c},
+  Olga Loginova, Olga Lyashevskaya, Teresa Lynn, Vivien Macketanz, Aibek
+  Makazhanov, Michael Mandl, Christopher Manning, Ruli Manurung, C{\u a}t{\u
+  a}lina M{\u a}r{\u a}nduc, David Mare{\v c}ek, Katrin Marheinecke, H{\'e}ctor
+  Mart{\'{\i}}nez~Alonso, Andr{\'e} Martins, Jan Ma{\v s}ek, Yuji Matsumoto,
+  Ryan {McDonald}, Gustavo Mendon{\c c}a, Niko Miekka, Margarita
+  Misirpashayeva, Anna Missil{\"a}, C{\u a}t{\u a}lin Mititelu, Yusuke Miyao,
+  Simonetta Montemagni, Amir More, Laura Moreno~Romero, Keiko~Sophie Mori,
+  Shinsuke Mori, Bjartur Mortensen, Bohdan Moskalevskyi, Kadri Muischnek, Yugo
+  Murawaki, Kaili M{\"u}{\"u}risep, Pinkey Nainwani, Juan~Ignacio
+  Navarro~Hor{\~n}iacek, Anna Nedoluzhko, Gunta Ne{\v s}pore-B{\=e}rzkalne,
+  Luong Nguy{\~{\^e}}n~Th{\d i}, Huy{\`{\^e}}n Nguy{\~{\^e}}n Th{\d i}~Minh,
+  Vitaly Nikolaev, Rattima Nitisaroj, Hanna Nurmi, Stina Ojala, Ad{\'e}day{\d
+  o} Ol{\'u}{\`o}kun, Mai Omura, Petya Osenova, Robert {\"O}stling, Lilja
+  {\O}vrelid, Niko Partanen, Elena Pascual, Marco Passarotti, Agnieszka
+  Patejuk, Guilherme Paulino-Passos, Siyao Peng, Cenel-Augusto Perez, Guy
+  Perrier, Slav Petrov, Jussi Piitulainen, Emily Pitler, Barbara Plank, Thierry
+  Poibeau, Martin Popel, Lauma Pretkalni{\c n}a, Sophie Pr{\'e}vost, Prokopis
+  Prokopidis, Adam Przepi{\'o}rkowski, Tiina Puolakainen, Sampo Pyysalo,
+  Andriela R{\"a}{\"a}bis, Alexandre Rademaker, Loganathan Ramasamy, Taraka
+  Rama, Carlos Ramisch, Vinit Ravishankar, Livy Real, Siva Reddy, Georg Rehm,
+  Michael Rie{\ss}ler, Larissa Rinaldi, Laura Rituma, Luisa Rocha, Mykhailo
+  Romanenko, Rudolf Rosa, Davide Rovati, Valentin Roșca, Olga Rudina, Jack
+  Rueter, Shoval Sadde, Beno{\^{\i}}t Sagot, Shadi Saleh, Tanja Samard{\v
+  z}i{\'c}, Stephanie Samson, Manuela Sanguinetti, Baiba Saul{\={\i}}te, Yanin
+  Sawanakunanon, Nathan Schneider, Sebastian Schuster, Djam{\'e} Seddah,
+  Wolfgang Seeker, Mojgan Seraji, Mo~Shen, Atsuko Shimada, Muh Shohibussirri,
+  Dmitry Sichinava, Natalia Silveira, Maria Simi, Radu Simionescu, Katalin
+  Simk{\'o}, M{\'a}ria {\v S}imkov{\'a}, Kiril Simov, Aaron Smith, Isabela
+  Soares-Bastos, Carolyn Spadine, Antonio Stella, Milan Straka, Jana
+  Strnadov{\'a}, Alane Suhr, Umut Sulubacak, Zsolt Sz{\'a}nt{\'o}, Dima Taji,
+  Yuta Takahashi, Takaaki Tanaka, Isabelle Tellier, Trond Trosterud, Anna
+  Trukhina, Reut Tsarfaty, Francis Tyers, Sumire Uematsu, Zde{\v n}ka Ure{\v
+  s}ov{\'a}, Larraitz Uria, Hans Uszkoreit, Sowmya Vajjala, Daniel van Niekerk,
+  Gertjan van Noord, Viktor Varga, Eric Villemonte de~la Clergerie, Veronika
+  Vincze, Lars Wallin, Jing~Xian Wang, Jonathan~North Washington, Seyi
+  Williams, Mats Wir{\'e}n, Tsegay Woldemariam, Tak-sum Wong, Chunxiao Yan,
+  Marat~M. Yavrumyan, Zhuoran Yu, Zden{\v e}k {\v Z}abokrtsk{\'y}, Amir Zeldes,
+  Daniel Zeman, Manying Zhang, and Hanzhi Zhu. 2018.
+\newblock \href {http://hdl.handle.net/11234/1-2895} {Universal dependencies
+  2.3}.
+\newblock {LINDAT}/{CLARIN} digital library at the Institute of Formal and
+  Applied Linguistics ({{\'U}FAL}), Faculty of Mathematics and Physics, Charles
+  University.
+
+\bibitem[{Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan,
+  Killeen, Lin, Gimelshein, Antiga, Desmaison, Kopf, Yang, DeVito, Raison,
+  Tejani, Chilamkurthy, Steiner, Fang, Bai, and Chintala}]{pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban
+  Desmaison, Andreas Kopf, Edward Yang, Zachary DeVito, Martin Raison, Alykhan
+  Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, and Soumith
+  Chintala. 2019.
+\newblock \href
+  {http://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library.pdf}
+  {{PyTorch}: An imperative style, high-performance deep learning library}.
+\newblock In \emph{Advances in Neural Information Processing Systems}.
+
+\bibitem[{Qi et~al.(2018)Qi, Dozat, Zhang, and Manning}]{qi2018universal}
+Peng Qi, Timothy Dozat, Yuhao Zhang, and Christopher~D. Manning. 2018.
+\newblock \href {https://nlp.stanford.edu/pubs/qi2018universal.pdf} {Universal
+  dependency parsing from scratch}.
+\newblock In \emph{Proceedings of the {CoNLL} 2018 Shared Task: Multilingual
+  Parsing from Raw Text to Universal Dependencies}.
+
+\bibitem[{Smith and Eisner(2006)}]{smith-eisner-2006-minimum}
+David~A. Smith and Jason Eisner. 2006.
+\newblock \href {https://www.aclweb.org/anthology/P06-2101} {Minimum risk
+  annealing for training log-linear models}.
+\newblock In \emph{Proceedings of the {COLING}/{ACL} 2006 Main Conference
+  Poster Sessions}, pages 787--794, Sydney, Australia. Association for
+  Computational Linguistics.
+
+\bibitem[{Smith and Eisner(2007)}]{smith-eisner-2007}
+David~A. Smith and Jason Eisner. 2007.
+\newblock \href {http://cs.jhu.edu/~jason/papers/#smith-eisner-2007}
+  {Bootstrapping feature-rich dependency parsers with entropic priors}.
+\newblock In \emph{Proceedings of the Joint Conference on Empirical Methods in
+  Natural Language Processing and Computational Natural Language Learning}.
+
+\bibitem[{Smith and Smith(2007)}]{smith-smith-2007}
+David~A. Smith and Noah~A. Smith. 2007.
+\newblock \href {https://www.aclweb.org/anthology/D07-1014} {Probabilistic
+  models of nonprojective dependency trees}.
+\newblock In \emph{Proceedings of the Joint Conference on Empirical Methods in
+  Natural Language Processing and Computational Natural Language Learning
+  ({EMNLP}-{C}o{NLL})}.
+
+\bibitem[{Stewart(1998)}]{stewart1998adjugate}
+G.~W. Stewart. 1998.
+\newblock \href
+  {https://www.sciencedirect.com/science/article/pii/S0024379598100988} {On the
+  adjugate matrix}.
+\newblock \emph{Linear Algebra and its Applications}, 283(1-3).
+
+\bibitem[{Stoyanov and Eisner(2012)}]{stoyanov-eisner-2012-minimum}
+Veselin Stoyanov and Jason Eisner. 2012.
+\newblock \href {https://www.aclweb.org/anthology/N12-1013} {Minimum-risk
+  training of approximate {CRF}-based {NLP} systems}.
+\newblock In \emph{Proceedings of the Conference of the North American Chapter
+  of the Association for Computational Linguistics: Human Language
+  Technologies}.
+
+\bibitem[{Tesni{\`e}re(1959)}]{tesniere1959elements}
+Lucien Tesni{\`e}re. 1959.
+\newblock \emph{El{\'e}ments de syntaxe structurale}.
+\newblock Klincksieck.
+
+\bibitem[{Tutte(1984)}]{tutte1984graph}
+W.~T. Tutte. 1984.
+\newblock \emph{Graph Theory}.
+\newblock Addison-Wesley Publishing Company.
+
+\bibitem[{Vieira et~al.(2016)Vieira, Cotterell, and
+  Eisner}]{vieira-etal-2016-speed}
+Tim Vieira, Ryan Cotterell, and Jason Eisner. 2016.
+\newblock \href {https://doi.org/10.18653/v1/D16-1206} {Speed-accuracy
+  tradeoffs in tagging with variable-order {CRF}s and structured sparsity}.
+\newblock In \emph{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Vieira and Eisner(2017)}]{vieira-eisner-2017-learning}
+Tim Vieira and Jason Eisner. 2017.
+\newblock \href {https://doi.org/10.1162/tacl_a_00060} {Learning to prune:
+  Exploring the frontier of fast and accurate parsing}.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  5:263--278.
+
+\bibitem[{Wainwright and Jordan(2008)}]{wainwright}
+Martin~J. Wainwright and Michael~I. Jordan. 2008.
+\newblock \emph{Graphical {M}odels, {E}xponential {F}amilies, and {V}ariational
+  {I}nference}.
+\newblock Now Publishers Inc.
+
+\bibitem[{Zmigrod et~al.(2020)Zmigrod, Vieira, and Cotterell}]{zmigrod2020mind}
+Ran Zmigrod, Tim Vieira, and Ryan Cotterell. 2020.
+\newblock \href {https://doi.org/10.18653/v1/2020.emnlp-main.390} {Please mind
+  the root: {D}ecoding arborescences for dependency parsing}.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 4809--4819.
+
+\end{thebibliography}

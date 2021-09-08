@@ -1,0 +1,163 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{mystyle}[preamble]
+
+%\usepackage[margin=1in]{geometry}
+
+% ToC
+%\usepackage{blindtext} 
+%\usepackage[linktocpage]{hyperref}
+%\usepackage{bookmark}
+%\usepackage{titlesec}
+
+% bib
+\usepackage[numbers]{natbib}
+
+% Math Imports
+\usepackage{amsmath, amssymb, bm, fancyhdr, dsfont, mathtools}
+\usepackage{booktabs}
+\usepackage{pifont}
+\usepackage{mathrsfs}
+
+% Tikz
+%\usepackage{tikz}
+%\usepackage{tikz-dependency}
+%\usetikzlibrary{shapes.arrows, positioning, fit, bayesnet,
+    %arrows,backgrounds,patterns,matrix,calc,shadows,plotmarks,
+    %shapes,positioning,automata,positioning,spy,scopes,chains,decorations,decorations.pathreplacing}
+%\pgfdeclarelayer{background}
+%\pgfdeclarelayer{foreground}
+%\pgfsetlayers{background,main,foreground}
+
+%\usepackage{wrapfig}
+\usepackage{comment}
+%\usepackage{subcaption}
+%\usepackage{titling}
+
+% Symbols
+\newcommand\ind{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+%\newcommand\norm[1]{\left\lVert#1\right\rVert}
+%\newcommand\set[1]{\left\{#1\right\}}
+
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\newcommand\RNN{\mathrm{RNN}}
+\newcommand\MLP{\mathrm{MLP}}
+\newcommand\enc{\mathrm{enc}}
+\newcommand\softmax{\mathrm{softmax}}
+
+% Distributions
+\newcommand{\Cat}{\mathrm{Cat}}
+\newcommand\Expo{\mathrm{Expo}}
+\newcommand\Bern{\mathrm{Bern}}
+\newcommand\Pois{\mathrm{Pois}}
+\newcommand\Bin{\mathrm{Bin}}
+\newcommand\Unif{\mathrm{Unif}}
+\newcommand\Betad{\mathrm{Beta}}
+\newcommand\Gammad{\mathrm{Gamma}}
+\newcommand\Geom{\mathrm{Geom}}
+\newcommand\Logd{\mathrm{Logistic}}
+
+\newcommand\E[1]{\mathbb{E}\left[#1\right]}
+\newcommand\Es[2]{\mathbb{E}_{#1}\left[#2\right]}
+\newcommand\KL[1]{D_\mathrm{KL}\left[#1\right]}
+\newcommand{\ELBO}{\mathrm{ELBO}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Cor}{\mathrm{Cor}}
+
+% Bold stuff
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+% mathcal stuff
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\mcD}{\mathcal{D}}
+\newcommand{\mcE}{\mathcal{E}}
+\newcommand{\mcF}{\mathcal{F}}
+\newcommand{\mcI}{\mathcal{I}}
+\newcommand{\mcJ}{\mathcal{J}}
+\newcommand{\mcL}{\mathcal{L}}
+\newcommand{\mcT}{\mathcal{T}}
+\newcommand{\mcV}{\mathcal{V}}
+\newcommand{\mcX}{\mathcal{X}}
+\newcommand{\mcY}{\mathcal{Y}}
+\newcommand{\mcZ}{\mathcal{Z}}
+
+% math blackboard bold stuff
+%\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+% sans serif italic
+\DeclareMathAlphabet{\mathsfit}{T1}{\sfdefault}{\mddefault}{\sldefault}
+\SetMathAlphabet{\mathsfit}{bold}{T1}{\sfdefault}{\bfdefault}{\sldefault}
+\newcommand{\sfa}{\mathsfit{a}}
+\newcommand{\sfb}{\mathsfit{b}}
+\newcommand{\sfc}{\mathsfit{c}}
+\newcommand{\sfd}{\mathsfit{d}}
+\newcommand{\sfe}{\mathsfit{e}}
+\newcommand{\sff}{\mathsfit{f}}
+\newcommand{\sfg}{\mathsfit{g}}
+\newcommand{\sfh}{\mathsfit{h}}
+\newcommand{\sfr}{\mathsfit{r}}
+\newcommand{\sfs}{\mathsfit{s}}
+\newcommand{\sft}{\mathsfit{t}}
+\newcommand{\sfw}{\mathsfit{w}}
+\newcommand{\sfx}{\mathsfit{x}}
+\newcommand{\sfy}{\mathsfit{y}}
+\newcommand{\sfz}{\mathsfit{z}}
+
+% sans serif bold
+\newcommand{\sfba}{\bm{\mathsfit{a}}}
+\newcommand{\sfbb}{\bm{\mathsfit{b}}}
+\newcommand{\sfbc}{\bm{\mathsfit{c}}}
+\newcommand{\sfbd}{\bm{\mathsfit{d}}}
+\newcommand{\sfbe}{\bm{\mathsfit{e}}}
+\newcommand{\sfbf}{\bm{\mathsfit{f}}}
+\newcommand{\sfbg}{\bm{\mathsfit{g}}}
+\newcommand{\sfbh}{\bm{\mathsfit{h}}}
+\newcommand{\sfbr}{\bm{\mathsfit{r}}}
+\newcommand{\sfbs}{\bm{\mathsfit{s}}}
+\newcommand{\sfbt}{\bm{\mathsfit{t}}}
+\newcommand{\sfbw}{\bm{\mathsfit{w}}}
+\newcommand{\sfbx}{\bm{\mathsfit{x}}}
+\newcommand{\sfby}{\bm{\mathsfit{y}}}
+\newcommand{\sfbz}{\bm{\mathsfit{z}}}
+
+% scaling variables
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+%\DeclareMathOperator*{\argmax}{argmax}
+
+\endinput
+
