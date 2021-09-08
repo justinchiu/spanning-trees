@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex slides"] 1631123915 "slides.aux" "slides.bbl" "slides" 1631125241
+["bibtex slides"] 1631123915 "slides.aux" "slides.bbl" "slides" 1631127543
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1480098435 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
   "paper/references.bib" 0 -1 0 ""
   "references.bib" 1630953405 304 2e76cfcac1103ffe610157bf70e83852 ""
-  "slides.aux" 1631125216 6036 cafef52b986f371a5bc7bb9cfb08504c ""
+  "slides.aux" 1631127543 6036 cafef52b986f371a5bc7bb9cfb08504c ""
   (generated)
-  "slides.bbl"
   "slides.blg"
-["pdflatex"] 1631125215 "slides.tex" "slides.pdf" "slides" 1631125241
+  "slides.bbl"
+["pdflatex"] 1631127542 "slides.tex" "slides.pdf" "slides" 1631127543
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1480098689 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1480098689 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -352,16 +352,16 @@
   "/usr/local/texlive/2018/texmf.cnf" 1526780430 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "mystyle.sty" 1631072794 4640 4fed64ece2291d52c52511e3305c541e ""
   "paper/macros.tex" 1631072718 5259 913fd705d1158ae5a2ec8aa52d188605 ""
-  "slides.aux" 1631125216 6036 cafef52b986f371a5bc7bb9cfb08504c ""
+  "slides.aux" 1631127543 6036 cafef52b986f371a5bc7bb9cfb08504c ""
   "slides.bbl" 1630953405 916 e89e79b64cef48b1259731ed90bd1471 "bibtex slides"
-  "slides.nav" 1631125216 3030 08146ad08b2b729bc41cb29129337789 ""
-  "slides.out" 1631125216 45 06e27b416b3b1946cd705c501ca5b3bd ""
-  "slides.tex" 1631125240 22404 03df2c8b72b8ffca19fbd8a95e1d6dca ""
+  "slides.nav" 1631127543 3030 08146ad08b2b729bc41cb29129337789 ""
+  "slides.out" 1631127543 45 06e27b416b3b1946cd705c501ca5b3bd ""
+  "slides.tex" 1631127540 22420 6a211dd3fd27d862203edbd04689dc83 ""
   (generated)
-  "slides.log"
   "slides.aux"
-  "slides.nav"
   "slides.out"
+  "slides.log"
+  "slides.snm"
   "slides.toc"
   "slides.pdf"
-  "slides.snm"
+  "slides.nav"
