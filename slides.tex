@@ -20,6 +20,22 @@
 
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+\algrenewcommand\algorithmicindent{1.0em}%
+\renewcommand\algorithmicdo{:}
+\renewcommand\algorithmicthen{:}
+\newcommand{\rightcomment}[1]{{\color{gray} \(\triangleright\) {\footnotesize\textit{#1}}}}
+\algrenewcommand{\algorithmiccomment}[1]{\hfill \rightcomment{#1}}  % redefines \Comment
+\algnewcommand{\LineComment}[1]{\State \rightcomment{#1}}
+\algnewcommand{\LinesComment}[1]{\State \rightcomment{\parbox[t]{\linewidth-\leftmargin-\widthof{\(\triangleright\) }}{#1}}}
+
+\newcommand{\algorithmicfunc}[1]{\textbf{def} #1 :}
+\algdef{SE}[FUNC]{Func}{EndFunc}[1]{\algorithmicfunc{#1}}{}
+\makeatletter
+\ifthenelse{\equal{\ALG@noend}{t}}%
+  {\algtext*{EndFunc}}
+  {}%
+\makeatother
+
 
 \usepackage{mathtools}  % For vcentcolor for defeq
  
@@ -172,7 +188,12 @@
     \begin{itemize}
     \item Uses automatic differentiation for easy to implement and efficient algorithms
     \end{itemize}
-\item Fun demonstration of inference with automatic differentiation
+\item Fun demonstration of a general `inference with automatic differentiation'
+    recipe
+    \begin{itemize}
+    \item Compute partition function
+    \item Use AD to compute expectations
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -184,7 +205,7 @@ Goal is to compute expectations over spanning trees
 \item Background: Distributions over (spanning) trees
 \item Method: Connecting expectations to derivatives
     \begin{itemize}
-    \item Use properties of \textbf{our} choice of tree distribution and decomposable functions
+    \item Use properties of our choice of tree distribution and decomposable functions
     \item Stitch together into efficient algorithms with automatic differentiation
     \end{itemize}
 \item Computational complexity
@@ -301,8 +322,9 @@ $Z = \det{L}$.
 \item Want to show that
     \begin{itemize}
     \item Can decompose totals into sums over marginals (enumerate parts of trees)
-    \item Can compute marginals using automatic differentation (cheap gradient principle)
-    \item Avoid storing full probability tables (requires low-level tricks, not the focus
+    \item Can compute marginals using automatic differentation (cheap gradient principle,
+        simple implementation)
+    \item Avoid storing full probability tables (requires low-level tricks, not our focus
         / see paper for details)
     \end{itemize}
 \end{itemize}
@@ -310,42 +332,117 @@ $Z = \det{L}$.
 
 \begin{frame}
 \frametitle{Additively decomposable functions}
-\begin{itemize}
-\item Allows us to decompose into functions of edges and combine with (unnormalized)
-    unary marginals
-\end{itemize}
+Allows us to decompose $r:\mcD\to\R^\nR$
+into functions of edges and combine with (unnormalized)
+unary marginals (over those tree edges)
+\begin{equation}
+    \rtree{\tree} = \smashoperator{\sum_{\edgeij\in\tree}}\redge{ij},
+\end{equation}
+with $\redge{ij}\in\R^\nR$
 \end{frame}
 
 \begin{frame}
-\frametitle{First order totals}
+\frametitle{Additively decomposable functions: Marginals}
+Marginals are expectations
+$$p(\edgeij\in\tree) = \Es{\ptree{\tree}}{1(\edgeij\in\tree)}_{ij} = [\sum_d p(d)r(d)]_{ij}$$
+Set
+$$\rtree{\tree} = 1(\edgeij\in\tree)$$
+Proof
+\begin{align*}
+1(\edgeij\in\tree) &\teq \sum_{\edgekl\in\tree}1(kl = ij)\\
+\Rightarrow \redge{ij} &\teq 1(kl=ij)
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Additively decomposable functions: Shannon Entropy}
+Shannon entropy is an expectation
+$$\Es{\ptree{\tree}}{-\log \ptree{\tree}}$$
+Set
+$$\rtree{\tree} = -\log \ptree{\tree}$$
+Proof
+\begin{align*}
+-\log \ptree{\tree} &\teq -\log(\frac{1}{\wbar} \prod_{\edgeij\in\tree} \wedge{ij})\\
+&\teq \log\wbar \,{-}\, \sum_{\edgeij \in \tree} \log\wedge{ij}\\
+\Rightarrow \redge{ij} &\teq \frac{1}{\nN}\log\wbar\,{-}\,\log\wedge{ij}
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{First order totals: Recipe}
 \begin{itemize}
 \item Rewrite unary marginal as gradient
-\item Rewrwite total as sum over unary parts
+\item Rewrite total as sum over unary parts
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{First order totals: Marginal}
+For any edge $\edgeij$,
+\begin{equation}
+    \totalw{ij} \defeq \sum_{\tree\in\inc{ij}}\wtree{\tree}=\frac{\partial \wbar}{\partial \wedge{ij}}\wedge{ij},
+\end{equation}
+where $\inc{ij}\defeq \{ \tree \in \st \mid \edgeij \in \tree \}$
+\vspace{2em}
 \begin{itemize}
-\item A
-\item B
+\item Significantly easier to implement via AD than manually
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{First order totals: Marginal derivation}
+\begin{align*}
+    \totalw{ij} &= \sum_{\tree\in\inc{ij}}\wtree{\tree} & \textrm{(Defn)}\\
+    &= \sum_{\tree\in\inc{ij}}\prod_{\edgeijp\in\tree}\wedge{i'j'} & \textrm{(Defn of }\wtree{\tree})\\
+    &= \wedge{ij} \sum_{\tree\in\inc{ij}}
+        \prod_{\substack{\edgeijp\in \\\tree\setminus \{\edgeij\}}}\wedge{i'j'}
+        & \textrm{(Pull out } \wedge{ij})\\
+    &=\wedge{ij} \frac{\partial}{\partial \wedge{ij}} \sumtree\prod_{\edgeijp\in\tree} \wedge{i'j'}
+        & \textrm{(Sum-prod deriv trick)}\\
+    &= \frac{\partial \wbar}{\partial \wedge{ij}} \wedge{ij} & \textrm{(Defn of }Z)
+\end{align*}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{First order totals: Total}
-\begin{itemize}
-\item A
-\item B
-\end{itemize}
+
+For any additively decomposable function $\treefuncSig{r}{\nR}$,
+\begin{equation}
+    \rbar = \smashoperator{\sum_{\edgeij\in\edges}}\totalw{ij}\redge{ij}
+        = \smashoperator{\sum_{\edgeij\in\edges}}\frac{\partial \wbar}{\partial \wedge{ij}}\wedge{ij}\redge{ij}
+\end{equation}
+
+Proof.
+\begin{align*}
+    \rbar &= \sumtree\wtree{\tree}\rtree{\tree}  & (\textrm{Defn})\\
+    &= \sumtree\wtree{\tree}\sum_{\edgeij\in \tree} \redge{ij} & (\textrm{Defn of }r(d))\\
+    &= \sumtree\sum_{\edgeij\in \tree}\wtree{\tree}\redge{ij} & (\textrm{Distributive prop})\\
+    &= \sum_{\edgeij\in\edges}\sum_{\tree\in\inc{ij}}\wtree{\tree}\redge{ij} & (\textrm{Commutative prop})\\
+    &= \smashoperator{\sum_{\edgeij\in\edges}}\totalw{ij}\redge{ij} & (\textrm{Defn of }\totalw{ij})
+\end{align*}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{First order totals: Algorithm}
-\begin{itemize}
-\item Rewrite unary marginal as gradient of partition function
-\item Rewrwite first order total as sum over unary parts
-\end{itemize}
+
+\begin{figure}[H]
+\begin{algorithmic}[1]
+
+\Func{$\algCall{\algFirst}{\funcSig{w}{\edges}{\real}, \funcSig{r}{\edges}{\real^\nR}}$}
+\LinesComment{Compute first-order total; requires $\bigo{\nN^3\nRs}$ time, $\bigo{\nN^2\!+\!\nR}$ space.
+}
+
+\State Compute all $\totalw{ij}$ via AD in $\bigo{\nN^3}$\footnote{
+        Constant factor of $\det{L}$ runtime with AD}
+\State $\rbar \gets {\displaystyle\smashoperator{\sum_{\edgeij\in\edges}}}
+     \totalw{ij} \redge{ij}$ {\color{gray}\algorithmiccomment{ $\bigo{\nN^2\nRs}$ }} \label{line:rbar}
+\State \Return $\rbar$
+\EndFunc
+\end{algorithmic}
+\end{figure}
+
 \end{frame}
 
 \begin{frame}
@@ -353,11 +450,30 @@ $Z = \det{L}$.
 \begin{itemize}
 \item Allows us to decompose into functions of pairs of edges and combine with (unnormalized)
     binary marginals
+\begin{equation}\label{eq:first-order}
+    \ttree{\tree} = \rtree{\tree} \stree{\tree}^\top
+\end{equation}
+\item Outer product of two additively decomposable functions, $\treefuncSig{r}{\nR}$ and  $\treefuncSig{s}{\nS}$
+\item $\ttree{\tree} \in \real^{\nR \times \nS}$ is generally a matrix.
+
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Second-order totals}
+\frametitle{Second-order additively decomposable functions: Binary marginals}
+Binary marginals are expectations
+\begin{align*}
+p(\edgeij,\edgekl \in\tree)
+&= \Es{\ptree{\tree}}{1(\edgeij,\edgekl\in\tree)}_{ij,kl}\\
+&= \left[\sum_d p(d)r(d)s(d)^\top\right]_{ij,kl}
+\end{align*}
+Set
+$$\rtree{\tree} = 1(\edgeij\in\tree),\qquad\stree{\tree} = 1(\edgekl\in\tree)$$
+which we know are additively decomposable
+\end{frame}
+
+\begin{frame}
+\frametitle{Second-order totals: Recipe}
 \begin{itemize}
 \item Rewrite binary marginal as Hessian of partition function
 \item Rewrite grad of intermediate total as Hessian-vector product
@@ -368,23 +484,123 @@ $Z = \det{L}$.
 
 \begin{frame}
 \frametitle{Second-order totals: Marginal}
-\begin{itemize}
-\item blah
-\end{itemize}
+Unnormalized binary marginals
+\begin{equation}
+    \totalw{ij,kl}\defeq\sum_{\tree\in\inc{ij,kl}}\wtree{\tree} 
+    =\frac{\partial^2 \wbar}{\partial \wedge{ij}\,\partial\wedge{kl}}\wedge{ij}\wedge{kl}
+\end{equation}
+where $\inc{ij,kl} \!\defeq\! \{ \tree \!\in\! \st \mid \edgeij \!\in\! \tree, \edgekl \!\in\! \tree \}$
+\end{frame}
+
+\begin{frame}
+\frametitle{Second-order totals: Marginal}
+Same tricks as first-order marginals
+\begin{align*}
+    \totalw{ij,kl} &= \sum_{\tree\in\inc{ij,kl}}\wtree{\tree} \\
+    &= \sum_{\tree\in\inc{ij,kl}}\prod_{\edgeklp\in\tree}\wedge{k'l'} \\
+    &= \wedge{ij}\wedge{kl}\frac{\partial^2}{\partial\wedge{ij}\partial\wedge{kl}} \sumtree\prod_{\edgeijp\in\tree}\wedge{i'j'} \\
+    &= \frac{\partial^2 \wbar}{\partial \wedge{ij}\,\partial\wedge{kl}}\wedge{ij}\wedge{kl}
+\end{align*}
 \end{frame}
 
 \begin{frame}
 \frametitle{Second-order totals: Grad of intermediate total}
+Write $\nabla \bar{r}$ in terms of Hessian $\nabla^2 Z$, as a step towards writing
+    $\bar{t}$ in terms of $\nabla^2 Z$
+
+\begin{align*}
+    &\wedge{ij}\frac{\partial\rbar}{\partial \wedge{ij}} \\
+    &= \wedge{ij}\frac{\partial}{\partial\wedge{ij}}\left(\sum_{\edgekl\in\edges}\frac{\partial\wbar}{\partial\wedge{kl}}\wedge{kl}\redge{kl}\right) \\
+    &= \wedge{ij}\frac{\partial\wbar}{\partial\wedge{ij}}\redge{ij} + \wedge{ij}\smashoperator{\sum_{\edgekl\in\edges}}\ \ \ \frac{\partial^2\wbar}{\partial\wedge{ij}\partial\wedge{kl}}\wedge{kl}\redge{kl} \\ 
+    &= \totalw{ij}\redge{ij} + \smashoperator{\sum_{\edgekl\in\edges}}\totalw{ij,kl}\redge{kl}
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second-order totals: Total}
+We can both
 \begin{itemize}
-    \item asdf
+    \item Write total $\tbar$ in terms of Jacobian
+        $\frac{\partial\rbar}{\partial \wedge{ij}}$
+        or gradients $\nabla \rbar_n$
+            \begin{itemize}
+            \item Run backward for each dimension or $\rbar$: $O(RN^3 + R^2N^2)$
+            \end{itemize}
+    \item Write total $\tbar$ in terms of Hessian $\nabla^2 Z$
+            \begin{itemize}
+            \item Hessian is large $O(N^4)$ entries
+            \item This takes $O(N^4)$ time, but can be optimized to
+                $O(N^2 + RS)$ space
+            \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Second-order totals: Total}
+
+\begin{align*}
+    \tbar
+    &= \sum_{\tree\in\st}\wtree{\tree}\rtree{\tree}\stree{\tree}^{\top} \\
+    &= \sum_{\tree\in\st}\wtree{\tree}\rtree{\tree}\smashoperator{\sum_{\edgeij\in \tree}}\sedge{ij}^{\top} \\
+    &= \sum_{\tree\in\st}\sum_{\edgeij\in \tree}\wtree{\tree}\rtree{\tree}\sedge{ij}^{\top} \\
+    &= \sum_{\edgeij\in\edges}\sum_{\tree\in\inc{ij}}\wtree{\tree}\rtree{\tree}\sedge{ij}^{\top} \\
+    &= \sum_{\edgeij\in\edges} \wedge{ij}\frac{\partial}{\partial \wedge{ij}} \!\left(  \sum_{\tree\in\st}\wtree{\tree}\rtree{\tree}\!\right)\!\sedge{ij}^{\top} \\
+    &= \sum_{\edgeij\in\edges}\wedge{ij}\frac{\partial \rbar}{\partial \wedge{ij}}\sedge{ij}^{\top}
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second-order totals: Jacobian version}
+
+\begin{figure}[H]
+\begin{algorithmic}[1]
+\Func{$\algCall{\algSecondVp}{\funcSig{w}{\edges}{\real}, \funcSig{r}{\edges}{\real^\nR}, \funcSig{s}{\edges}{\real^\nS}}$}
+\LinesComment{Compute second-order total with gradient-vector products;
+requires $\mathcal{O}(\nR(\nN^3 \!+\! \nN^2\nRs \!+\! \nN^2\nSs))$ time, $\bigo{\nN^2\nR \!+\! \nR\,\nS}$ space.
+}
+\For{$n=1 \ldots \nR$} {\color{gray}\algorithmiccomment{ $\bigo{\nR(\nN^3 + \nN^2\nRs)}$ }} \label{line:rloop}
+\State Compute $\nabla\rbar_{n}$ using reverse-mode AD on $[\algFirst(w, r)]_n$
+\EndFor
+\LinesComment{Requires $\bigo{\nN^2 \nR \nSs}$}
+\State \Return ${\displaystyle\smashoperator{\sum_{\edgeij\in\edges}}}
+    \frac{\partial \rbar}{\partial \wedge{ij}}\wedge{ij}\sedge{ij}^{\top}$ 
+     \label{line:tbar}
+\EndFunc
+\end{algorithmic}
+\end{figure}
+
 \begin{itemize}
-    \item asdf
+\item Recommended approach
 \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Second-order totals: Hessian version}
+
+\begin{figure}[H]
+\begin{algorithmic}[1]
+
+\Func{$\algCall{\algSecondHes}{\funcSig{w}{\edges}{\real}, \funcSig{r}{\edges}{\real^\nR}, \funcSig{s}{\edges}{\real^\nS}}$}
+\LinesComment{Compute second-order total by materializing Hessian; requires $\bigo{\nN^4\nRs\nSs}$ time, $\bigo{\nN^2 \!+\! \nR\,\nS}$ space.}
+\State Compute all $\totalw{ij}$ via $\nabla Z$
+\State Compute all $\totalw{ij,kl}$ via $\nabla^2 Z$ (can compute this efficiently)
+\LinesComment{Requires $\bigo{\nN^4 \nRs \nSs}$}
+\State \Return ${\displaystyle\smashoperator{\sum_{\edgeij\in\edges}}}\totalw{ij}\redge{ij}\sedge{ij}^\top + {\displaystyle\smashoperator{\sum_{\edgekl\in\edges}}}\totalw{ij,kl}\redge{ij}\sedge{kl}^\top$ \label{line:acum}
+\EndFunc
+
+\end{algorithmic}
+\end{figure}
+
+\begin{itemize}
+    \item Better than previous algo at dealing with sparsity,
+        i.e. if $R$ and $S$ are really big and sparse
+    \item Can come up with a 3rd algo that has the best of both worlds
+        by computing the second term involving the
+        Hessian-matrix product more efficiently
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}[allowframebreaks]
