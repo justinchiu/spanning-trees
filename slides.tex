@@ -271,15 +271,20 @@ $Z = \det{L}$.
 \frametitle{Intuition for decompositions}
 % Lets try to gain some intuition about decompositions
 \begin{itemize}
-\item Tree distribution is a distribution over a binary vector of size $O(N^2)$
-\item Compute expectations by storing the relevant parts of trees and their probabilities,
-    then applying $f$ to those parts
+\item Recall: Tree distribution is a distribution over a binary vector of size $O(N^2)$
+\item Compute expectations by
+    \begin{itemize}
+        \item Storing the relevant parts of trees and their marginal probabilities
+        \item Applying $f$ to those parts
+    \end{itemize}
 \item Consider different levels of decomposability of $f$
     \begin{itemize}
-    \item Does not decompose: $p(d)$ (exponential space)
-    \item Decomposes over pairs of edges: $p(\edgeij,\edgekl \in d)$ ($O(N^4)$ space)
-    \item Decomposes over edges: $p(\edgeij \in d)$ ($O(N^2)$ space)
+    \item Does not decompose: exponential num trees
+    \item Decomposes over pairs of edges: $O(N^4)$ evals
+    \item Decomposes over edges: $O(N^2)$ evals
     \end{itemize}
+\item Combine $p(\textrm{part})f(\textrm{part})$ to compute expectation
+    (unnormalized total using $p(\textrm{part}) = \frac{1}{Z}\tilde{w}_{\textrm{part}}$)
 \end{itemize}
 \end{frame}
 
@@ -297,6 +302,8 @@ $Z = \det{L}$.
     \begin{itemize}
     \item Can decompose totals into sums over marginals (enumerate parts of trees)
     \item Can compute marginals using automatic differentation (cheap gradient principle)
+    \item Avoid storing full probability tables (requires low-level tricks, not the focus
+        / see paper for details)
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -310,6 +317,38 @@ $Z = \det{L}$.
 \end{frame}
 
 \begin{frame}
+\frametitle{First order totals}
+\begin{itemize}
+\item Rewrite unary marginal as gradient
+\item Rewrwite total as sum over unary parts
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{First order totals: Marginal}
+\begin{itemize}
+\item A
+\item B
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{First order totals: Total}
+\begin{itemize}
+\item A
+\item B
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{First order totals: Algorithm}
+\begin{itemize}
+\item Rewrite unary marginal as gradient of partition function
+\item Rewrwite first order total as sum over unary parts
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Second-order additively decomposable functions}
 \begin{itemize}
 \item Allows us to decompose into functions of pairs of edges and combine with (unnormalized)
@@ -318,21 +357,31 @@ $Z = \det{L}$.
 \end{frame}
 
 \begin{frame}
-\frametitle{Main Idea: Connection between partition function and moments}
+\frametitle{Second-order totals}
 \begin{itemize}
-\item asdf
+\item Rewrite binary marginal as Hessian of partition function
+\item Rewrite grad of intermediate total as Hessian-vector product
+\item Rewrite second-order total as Jacobian-matrix product or Hessian-matrix product
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Notation}
+\frametitle{Second-order totals: Marginal}
 \begin{itemize}
 \item blah
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Matrix Tree Theorem: Counting Trees}
+\frametitle{Second-order totals: Grad of intermediate total}
+\begin{itemize}
+    \item asdf
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second-order totals: Total}
 \begin{itemize}
     \item asdf
 \end{itemize}

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex slides"] 1631083676 "slides.aux" "slides.bbl" "slides" 1631083887
+["bibtex slides"] 1631086703 "slides.aux" "slides.bbl" "slides" 1631109614
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1480098435 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
   "paper/references.bib" 0 -1 0 ""
   "references.bib" 1630953405 304 2e76cfcac1103ffe610157bf70e83852 ""
-  "slides.aux" 1631083887 3882 83c45f7991f71818f103cf58d4c642b5 ""
+  "slides.aux" 1631109614 4527 92357918a2f9f8c05fc598e6ea266ec8 ""
   (generated)
-  "slides.blg"
   "slides.bbl"
-["pdflatex"] 1631083886 "slides.tex" "slides.pdf" "slides" 1631083887
+  "slides.blg"
+["pdflatex"] 1631109613 "slides.tex" "slides.pdf" "slides" 1631109614
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1480098689 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1480098689 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -63,6 +63,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1480098733 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1480098733 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1480098733 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1480098733 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb" 1480098733 24420 52dbb8e8aa0069a1b987309557f8d303 ""
@@ -332,16 +333,16 @@
   "/usr/local/texlive/2018/texmf.cnf" 1526780430 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "mystyle.sty" 1631072794 4640 4fed64ece2291d52c52511e3305c541e ""
   "paper/macros.tex" 1631072718 5259 913fd705d1158ae5a2ec8aa52d188605 ""
-  "slides.aux" 1631083887 3882 83c45f7991f71818f103cf58d4c642b5 ""
+  "slides.aux" 1631109614 4527 92357918a2f9f8c05fc598e6ea266ec8 ""
   "slides.bbl" 1630953405 916 e89e79b64cef48b1259731ed90bd1471 "bibtex slides"
-  "slides.nav" 1631083887 1821 6e4c4fbc007db0329cdbdb5b5f6af3d7 ""
-  "slides.out" 1631083887 45 06e27b416b3b1946cd705c501ca5b3bd ""
-  "slides.tex" 1631083885 11645 8e4add0a3f5016a4378f5651fd85d9d3 ""
+  "slides.nav" 1631109614 2286 61c693b78a4859ef47593b10c7e34ea2 ""
+  "slides.out" 1631109614 45 06e27b416b3b1946cd705c501ca5b3bd ""
+  "slides.tex" 1631109611 12879 e5f163e5d7bac988bb5330054112005d ""
   (generated)
-  "slides.log"
   "slides.snm"
-  "slides.pdf"
+  "slides.log"
   "slides.aux"
-  "slides.toc"
+  "slides.pdf"
   "slides.out"
   "slides.nav"
+  "slides.toc"
